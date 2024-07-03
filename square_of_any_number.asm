@@ -14,7 +14,7 @@ _start:
 	mov edx, 1
 	int 0x80
 	
-	call factorial
+	call square
 	
 	mov	eax, 4	   
 	mov	ebx, 1	   
@@ -33,7 +33,7 @@ _start:
 	int	0x80      
 	
 	
-	factorial:
+	square:
 	mov eax, [input]
 	sub eax, '0'
 	
@@ -52,7 +52,7 @@ section	.data
 msg	db	'Enter number: '
 len	equ	$ - msg			
 
-msg1 db	'Factorial is: '	
+msg1 db	'Square is: '	
 len1 equ	$ - msg1	
 
 section .bss
